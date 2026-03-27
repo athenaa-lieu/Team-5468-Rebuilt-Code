@@ -45,6 +45,12 @@ public final class Constants {
     public static final double kBackLeftChassisAngularOffset = Math.PI;
     public static final double kBackRightChassisAngularOffset = -Math.PI / 2;
 
+    // Competition Robot Offsets (DO NOT CHANGE UNLESS YOU KNOW WHAT YOU ARE DOING)
+    public static final double kFrontLeftDriveAbsoluteEncoderOffsetRad = Math.toRadians(215.04 - 8.69 + 180.0);
+    public static final double kBackLeftDriveAbsoluteEncoderOffsetRad = Math.toRadians(239.8 - 5.6 + 180.0);
+    public static final double kFrontRightDriveAbsoluteEncoderOffsetRad = Math.toRadians(155.49 + 2.74);
+    public static final double kBackRightDriveAbsoluteEncoderOffsetRad = Math.toRadians(179.64 - 1.46 + 180.0);
+
     // SPARK MAX CAN IDs
     public static final int kFrontLeftDrivingCanId = 7;
     public static final int kRearLeftDrivingCanId = 5;
