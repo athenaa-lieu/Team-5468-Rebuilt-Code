@@ -15,6 +15,7 @@ import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.DriveConstants;
 
@@ -61,6 +62,11 @@ public class DriveSubsystem extends SubsystemBase {
   public void periodic() {
     // Update pose estimator with encoder and gyro data
     m_poseEstimator.update(getRotation2d(), getModulePositions());
+
+    // OFFSET PRINT OUT (DO NOT DELETE)
+    System.out.println("" + m_frontLeft.getPosition().angle.toString());
+
+    SmartDashboard.putString("Field Location", getPose().toString());
   }
 
   /**
